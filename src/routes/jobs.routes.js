@@ -1,6 +1,6 @@
 const express = require('express');
 const jobsRouter = express.Router();
-const {getProfile} = require('../middleware/getProfile')
+const {getProfile} = require('../middleware/getProfile');
 
 const {
   getUnpaidJobs,

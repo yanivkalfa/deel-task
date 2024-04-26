@@ -1,6 +1,6 @@
 const express = require('express');
 const adminRouter = express.Router();
-const {getProfile} = require('../middleware/getProfile')
+const {getProfile} = require('../middleware/getProfile');
 
 const {
   getBestClients,
