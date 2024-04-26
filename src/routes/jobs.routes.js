@@ -14,7 +14,7 @@ jobsRouter.all('*', getProfile);
 
 // Path: /jobs/unpaid
 // ==================================================
-jobsRouter.route('/unpaid ')
+jobsRouter.route('/unpaid')
   .get(getUnpaidJobs);
 
 // Path: /jobs/:job_id/pay
