@@ -10,11 +10,14 @@
   },
   "scripts": {
     "start": "nodemon ./src/server.js",
-    "seed": "node ./scripts/seedDb.js"
+    "seed": "node ./scripts/seedDb.js",
+    "test": "cross-env NODE_ENV=test mocha --time --delay --exit \"server/**/*.spec*.js\" --timeout 0"
   },
   "devDependencies": {
     "concurrently": "^8.0.1",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "mocha": "^10.4.0",
+    "supertest": "^7.0.0"
   },
   "engines": {
     "node": ">=10.16.3"

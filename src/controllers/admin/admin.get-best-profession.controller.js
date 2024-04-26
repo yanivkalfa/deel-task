@@ -13,8 +13,7 @@ exports.getBestProfessions = async function (req, res, next) {
   const endDate = new Date(end);
 
   if (!isFinite(startDate) || !isFinite(endDate)) return res.status(500).end('Date is invalid');
-  console.log('startDate', endDate);
-  console.log('endDate, ', endDate);
+
   const topProfessions = await Job.findAll( {
     attributes: [
       // include the summed value here
@@ -52,7 +51,7 @@ exports.getBestProfessions = async function (req, res, next) {
       }
     ]
   });
-  console.log(topProfessions.length);
+
   if (!topProfessions || !topProfessions.length) return res.status(404).end('No records found');
   return res.status(200).end(`success: Top Profession is: ${topProfessions[0].dataValues.profession} with: ${topProfessions[0].dataValues.priceSum} earning`);
 };
